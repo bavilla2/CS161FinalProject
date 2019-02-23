@@ -42,6 +42,11 @@ public class Player : MonoBehaviour
         }
 
         Debug.Log(health);
+
+        if (Input.GetKeyDown(KeyCode.F)){
+            throw_snowball();
+        }
+
     }
 
     void move()
@@ -110,6 +115,9 @@ public class Player : MonoBehaviour
 
     private void throw_snowball()
     {
+        Vector3 oneUnitRightOfMe = this.transform.position + Vector3.right;
+
+        Instantiate(snowball, oneUnitRightOfMe, Quaternion.identity);
 
     }
 }
