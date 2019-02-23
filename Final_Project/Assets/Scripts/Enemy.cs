@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
                 Debug.Log("30 s");
                 player.GetComponent<Player>().health -= 30;
             }
-            else if (collision.CompareTag("Fire"))
+            else if (tag == "Fire")
             {
                 Debug.Log("5 s");
                 player.GetComponent<Player>().health -= 5;
