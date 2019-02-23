@@ -40,6 +40,8 @@ public class Player : MonoBehaviour
         {
             Jump();
         }
+
+        Debug.Log(health);
     }
 
     void move()
