@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2315879610387424118}
   - component: {fileID: 2436140890846311551}
-  - component: {fileID: 5638099045667260101}
+  - component: {fileID: 7801758589829662302}
   - component: {fileID: 3629645448171414995}
+  - component: {fileID: 2243783709990982447}
   m_Layer: 0
   m_Name: IceCube
   m_TagString: IceCube
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &5638099045667260101
+--- !u!50 &7801758589829662302
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -132,6 +133,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 34.045013, y: 25.247944}
   m_EdgeRadius: 0
+--- !u!114 &2243783709990982447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871800105186251084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a9fe5d4831e41f29122b3862b442cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &4883758485750976338
 GameObject:
   m_ObjectHideFlags: 0
