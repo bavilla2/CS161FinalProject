@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         {
             restart_game();
         }*/
-
+        
         move();
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -54,21 +54,24 @@ public class Player : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log(collision.collider.name);
         if (collision.collider.CompareTag("Ground"))
         {
             isGrounded = true;
 
             Vector2 feetPosition = new Vector2(this.transform.position.x, m_collider.bounds.min.y);
-            RaycastHit2D hitInfo = Physics2D.Raycast(feetPosition, Vector2.down, 0.1f);
-            //Debug.DrawRay(feetPosition, Vector2.down * 0.1f, Color.green);
-            if (hitInfo && hitInfo.collider.CompareTag("Ground"))
+            RaycastHit2D jumpInfo = Physics2D.Raycast(feetPosition, Vector2.down, 0.1f);
+            Debug.DrawRay(feetPosition, Vector2.down * 0.1f, Color.green);
+            if (jumpInfo && jumpInfo.collider.CompareTag("Ground"))
             {
                 isGrounded = true;
             }
         }
+        
+    }
 
-        if (collision.collider.CompareTag("Lava"))
+    private void onTriggerEnter(Collider2D collider)
+    {
+        if (collider.CompareTag("Lava"))
         {
             restart_game();
         }

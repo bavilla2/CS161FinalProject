@@ -8,6 +8,7 @@ TagManager:
   - IceCube
   - Player_collider
   - Sun
+  - Ground
   layers:
   - Default
   - TransparentFX
