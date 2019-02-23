@@ -117,7 +117,8 @@ public class Player : MonoBehaviour
     {
         Vector3 oneUnitRightOfMe = this.transform.position + Vector3.right;
 
-        Instantiate(snowball, oneUnitRightOfMe, Quaternion.identity);
+        GameObject Snowball = Instantiate(snowball, oneUnitRightOfMe, Quaternion.identity);
+        Snowball.GetComponent<Rigidbody2D>().AddForce(new Vector2(12f, 4f), ForceMode2D.Impulse);
 
     }
 }
