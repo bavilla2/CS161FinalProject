@@ -9,6 +9,9 @@ TagManager:
   - Player_collider
   - Sun
   - Ground
+  - Grill
+  - Flamethrower
+  - Fire
   layers:
   - Default
   - TransparentFX
