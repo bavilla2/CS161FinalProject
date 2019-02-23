@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         {
             restart_game();
         }*/
-        
+
         move();
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -69,8 +69,9 @@ public class Player : MonoBehaviour
         
     }
 
-    private void onTriggerEnter(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
+
         if (collider.CompareTag("Lava"))
         {
             restart_game();
