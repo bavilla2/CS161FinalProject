@@ -194,6 +194,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &878946121 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5130553261790685718, guid: f285eada2d6e641579311fda38689f27,
+    type: 3}
+  m_PrefabInstance: {fileID: 7205161332115042142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d61f5e10e6624043a891c65c0c49256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &898689392
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,16 +860,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 878946121}
+    - target: {fileID: 7205161333582731492, guid: f285eada2d6e641579311fda38689f27,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 7205161331927444059, guid: f285eada2d6e641579311fda38689f27,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 878946121}
+    - target: {fileID: 7205161331927444059, guid: f285eada2d6e641579311fda38689f27,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7205161332241793249, guid: f285eada2d6e641579311fda38689f27,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 878946121}
+    - target: {fileID: 7205161332241793249, guid: f285eada2d6e641579311fda38689f27,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f285eada2d6e641579311fda38689f27, type: 3}
