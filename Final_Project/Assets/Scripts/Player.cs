@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     private bool isGrounded = false;
     private bool alive = true;
     private Collider2D m_collider;
+    [SerializeField] public bool isThrown = false;
+    public Animator animator; 
+
 
     public GameObject snowball;
     // Start is called before the first frame update
@@ -41,12 +44,29 @@ public class Player : MonoBehaviour
             Jump();
         }
 
-        Debug.Log(health);
+        //Debug.Log(health);
 
-        if (Input.GetKeyDown(KeyCode.F)){
-            throw_snowball();
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            print("I pressed F");
+            StartCoroutine(Throw_Snowball_Animation());
+            //throw_snowball();
+            //animator.SetBool("Is_thrown", false);
         }
 
+    }
+
+    IEnumerator Throw_Snowball_Animation()
+    {
+        animator.SetBool("Is_thrown", true);
+        yield return StartCoroutine(Thrown(0.5f));
+        throw_snowball();
+        animator.SetBool("Is_thrown", false);
+    }
+
+    IEnumerator Thrown(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
     }
 
     void move()
@@ -81,6 +101,7 @@ public class Player : MonoBehaviour
 
         if (collider.CompareTag("Lava"))
         {
+            animator.SetFloat("health", 0.0f);
             restart_game();
         }
     }
@@ -100,6 +121,7 @@ public class Player : MonoBehaviour
         if (health < 0)
         {
             alive = false;
+            animator.SetFloat("health", 0.0f);
         }
     }
 
@@ -116,9 +138,8 @@ public class Player : MonoBehaviour
     private void throw_snowball()
     {
         Vector3 oneUnitRightOfMe = this.transform.position + Vector3.right;
-
+        //animator.SetBool("Is_thrown", true);
         GameObject Snowball = Instantiate(snowball, oneUnitRightOfMe, Quaternion.identity);
         Snowball.GetComponent<Rigidbody2D>().AddForce(new Vector2(12f, 4f), ForceMode2D.Impulse);
-
     }
 }
