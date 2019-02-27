@@ -104,6 +104,53 @@ public class Player : MonoBehaviour
             animator.SetFloat("health", 0.0f);
             restart_game();
         }
+
+        else if(collider.CompareTag("Gem"))
+        {
+            restart_game();
+        }
+        else if(collider.CompareTag("Cactus"))
+        {
+            Debug.Log("5 s");
+            health -= 5;
+        }
+        else if (collider.CompareTag("Fire"))
+        {
+            Debug.Log("20 s");
+            health -= 20;
+            Destroy(collider.gameObject);
+        }
+        else if (collider.CompareTag("Flamethrower"))
+        {
+            Debug.Log("30 s");
+            health -= 30;
+            Destroy(collider.gameObject);
+        }
+        else if (collider.CompareTag("Grill"))
+        {
+            Debug.Log("10 s");
+            health -= 10;
+            Destroy(collider.gameObject);
+        }
+        else if (collider.CompareTag("IceCube"))
+        {
+            Debug.Log("5 s");
+            health += 5;
+            Destroy(collider.gameObject);
+        }
+        else if (collider.CompareTag("AC"))
+        {
+            Debug.Log("20 s");
+            health += 20;
+            Destroy(collider.gameObject);
+        }
+        else if (collider.CompareTag("Popsicle"))
+        {
+            Debug.Log("10 s");
+            health += 10;
+            Destroy(collider.gameObject);
+        }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -127,7 +174,7 @@ public class Player : MonoBehaviour
 
     private static float GetDeltaTime()
     {
-        return Time.deltaTime;
+        return Time.deltaTime*2;
     }
 
     void restart_game()

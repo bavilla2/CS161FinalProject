@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6618139727867039099}
   - component: {fileID: 6368350696866648489}
   - component: {fileID: 5219335713820023954}
+  - component: {fileID: 8446617657953379280}
   m_Layer: 0
   m_Name: popsicle
   m_TagString: Popsicle
@@ -92,3 +93,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a9fe5d4831e41f29122b3862b442cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &8446617657953379280
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067062456155438551}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.02, y: 8}
+    newSize: {x: 5.02, y: 8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 7}
+  m_EdgeRadius: 0
