@@ -36,6 +36,11 @@ public class Enemy : MonoBehaviour
                 Debug.Log("5 s");
                 player.GetComponent<Player>().health -= 5;
             }
+            else if (tag == "Cactus")
+            {
+                Debug.Log("2 s");
+                player.GetComponent<Player>().health -= 2;
+            }
         }
     }
 }
