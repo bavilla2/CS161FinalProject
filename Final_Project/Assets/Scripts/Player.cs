@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
         {
-            isGrounded = true;
+            //isGrounded = true;
 
             Vector2 feetPosition = new Vector2(this.transform.position.x, m_collider.bounds.min.y);
             RaycastHit2D jumpInfo = Physics2D.Raycast(feetPosition, Vector2.down, 0.1f);
