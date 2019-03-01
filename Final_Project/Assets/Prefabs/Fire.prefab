@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8287646878872513021}
   - component: {fileID: 8287646878872513020}
   - component: {fileID: 8711355982384819952}
-  - component: {fileID: 1151406555416080664}
+  - component: {fileID: 2871697688607160056}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Fire
@@ -107,16 +107,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9560394, y: 0.6614769}
   m_EdgeRadius: 0
---- !u!114 &1151406555416080664
-MonoBehaviour:
+--- !u!95 &2871697688607160056
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8287646878872513011}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4675552a3dcf6b4d9ab104a473d6673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 6783852349572370030, guid: 509d49f29855c41d18bc78be5a4848d4, type: 3}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c474c7acd60949208592a681094a207, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

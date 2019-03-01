@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5607518483087824468}
   - component: {fileID: 5607518483087824471}
-  - component: {fileID: 5607518483087824470}
   - component: {fileID: 5607518483087824473}
   m_Layer: 0
   m_Name: Flamethrower
@@ -71,7 +70,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a0cd43be8516247f89686b0e1c6610d6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -81,19 +80,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5607518483087824470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5607518483087824472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4675552a3dcf6b4d9ab104a473d6673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 6783852349572370030, guid: 509d49f29855c41d18bc78be5a4848d4, type: 3}
 --- !u!61 &5607518483087824473
 BoxCollider2D:
   m_ObjectHideFlags: 0
