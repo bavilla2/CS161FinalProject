@@ -14,9 +14,8 @@ public class Player : MonoBehaviour
     [SerializeField] public bool isThrown = false;
     public Animator animator;
     private RaycastHit2D jumpInfo; 
-
-
     public GameObject snowball;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,13 +34,8 @@ public class Player : MonoBehaviour
         life();
         if(!alive)
         {
-            restart_game();
+            StartCoroutine(Dead());
         }
-        
-        /*if(this.transform.position.y <= -17.0f)
-        {
-            restart_game();
-        }*/
 
         move();
 
@@ -107,15 +101,14 @@ public class Player : MonoBehaviour
         if (collision.collider.CompareTag("Ground"))
         {
             //isGrounded = true;
-
             /*Vector2 feetPosition = new Vector2(this.transform.position.x, m_collider.bounds.min.y);
             //RaycastHit2D jumpInfo = Physics2D.Raycast(feetPosition, Vector2.down, 0.1f);
             //Debug.DrawRay(feetPosition, Vector2.down * 0.1f, Color.green);
             RaycastHit2D jumpInfo = Physics2D.Raycast(feetPosition, Vector2.down, 0.6f);
             Debug.DrawRay(feetPosition, Vector2.down * 0.6f, Color.green);*/
+            //isGrounded = true;
             if (jumpInfo && jumpInfo.collider.CompareTag("Ground"))
             {
-                Debug.Log("I can jump again");
                 isGrounded = true;
             }
         }
@@ -127,8 +120,8 @@ public class Player : MonoBehaviour
 
         if (collider.CompareTag("Lava"))
         {
-            animator.SetFloat("health", 0.0f);
-            restart_game();
+            StartCoroutine(Dead());
+            //restart_game();
         }
 
         else if(collider.CompareTag("Gem"))
@@ -187,8 +180,15 @@ public class Player : MonoBehaviour
         if (health < 0)
         {
             alive = false;
-            animator.SetFloat("health", 0.0f);
         }
+    }
+
+    IEnumerator Dead()
+    {
+        Debug.Log("Im dead");
+        animator.SetBool("isDead", true);
+        yield return new WaitForSeconds(0.2f);
+        restart_game();
     }
 
     private static float GetDeltaTime()
