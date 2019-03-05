@@ -21,6 +21,6 @@ public class HealthBar : MonoBehaviour
     void Update()
     {
         Player_Health = GameObject.Find("Player").GetComponent<Player>().health;
-        Health_Text.text = string.Format("Health {0:0}", Player_Health);
+        Health_Text.text = string.Format("Chill {0:0}", Player_Health);
     }
 }
