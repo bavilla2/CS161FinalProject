@@ -614,7 +614,8 @@ MonoBehaviour:
   speed: 5
   jumpForce: 10
   health: 100
-  snowball: {fileID: 0}
+  snowball: {fileID: 5890109827468658183, guid: 7f319f0fb8f29424fae84f115b9e871d,
+    type: 3}
 --- !u!1 &1149501902
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,9 +13,17 @@ public class Player : MonoBehaviour
     private Collider2D m_collider;
     [SerializeField] public bool isThrown = false;
     public Animator animator;
-    private RaycastHit2D jumpInfo; 
+    private RaycastHit2D jumpInfo;
+    public static Player instance;
+
+
+
     public GameObject snowball;
 
+    void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +42,13 @@ public class Player : MonoBehaviour
         life();
         if(!alive)
         {
-            StartCoroutine(Dead());
+            restart_game();
         }
+        
+        /*if(this.transform.position.y <= -17.0f)
+        {
+            restart_game();
+        }*/
 
         move();
 
@@ -101,14 +114,15 @@ public class Player : MonoBehaviour
         if (collision.collider.CompareTag("Ground"))
         {
             //isGrounded = true;
+
             /*Vector2 feetPosition = new Vector2(this.transform.position.x, m_collider.bounds.min.y);
             //RaycastHit2D jumpInfo = Physics2D.Raycast(feetPosition, Vector2.down, 0.1f);
             //Debug.DrawRay(feetPosition, Vector2.down * 0.1f, Color.green);
             RaycastHit2D jumpInfo = Physics2D.Raycast(feetPosition, Vector2.down, 0.6f);
             Debug.DrawRay(feetPosition, Vector2.down * 0.6f, Color.green);*/
-            //isGrounded = true;
             if (jumpInfo && jumpInfo.collider.CompareTag("Ground"))
             {
+                Debug.Log("I can jump again");
                 isGrounded = true;
             }
         }
@@ -120,8 +134,8 @@ public class Player : MonoBehaviour
 
         if (collider.CompareTag("Lava"))
         {
-            StartCoroutine(Dead());
-            //restart_game();
+            animator.SetFloat("health", 0.0f);
+            restart_game();
         }
 
         else if(collider.CompareTag("Gem"))
@@ -180,15 +194,8 @@ public class Player : MonoBehaviour
         if (health < 0)
         {
             alive = false;
+            animator.SetFloat("health", 0.0f);
         }
-    }
-
-    IEnumerator Dead()
-    {
-        Debug.Log("Im dead");
-        animator.SetBool("isDead", true);
-        yield return new WaitForSeconds(0.2f);
-        restart_game();
     }
 
     private static float GetDeltaTime()
@@ -205,6 +212,9 @@ public class Player : MonoBehaviour
     {
         Vector3 oneUnitRightOfMe = this.transform.position + Vector3.right;
         GameObject Snowball = Instantiate(snowball, oneUnitRightOfMe, Quaternion.identity);
-        Snowball.GetComponent<Rigidbody2D>().AddForce(new Vector2(12f, 4f), ForceMode2D.Impulse);
+        Snowball.GetComponent<Rigidbody2D>().AddForce(new Vector2(12f, 0f), ForceMode2D.Impulse);
+        health -= 5;
+        Destroy(Snowball, 2f);
     }
+
 }
