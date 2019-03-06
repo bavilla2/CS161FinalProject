@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5113997460346694339}
   - component: {fileID: 8789483927834859543}
   - component: {fileID: 2797328910899889339}
+  - component: {fileID: 1564830171972042150}
   m_Layer: 0
   m_Name: end_gem
   m_TagString: Gem
@@ -106,3 +107,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 2.4}
   m_EdgeRadius: 0
+--- !u!122 &1564830171972042150
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663832204815578878}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4292465865
+  m_Size: 5

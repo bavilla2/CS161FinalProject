@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1375716386563045239}
   - component: {fileID: 1375716386563045238}
   - component: {fileID: 1375716386563045242}
+  - component: {fileID: 6018187376129299087}
   m_Layer: 0
   m_Name: Grill
   m_TagString: Grill
@@ -106,3 +107,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 3}
   m_EdgeRadius: 0
+--- !u!122 &6018187376129299087
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375716386563045241}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4280624567
+  m_Size: 2

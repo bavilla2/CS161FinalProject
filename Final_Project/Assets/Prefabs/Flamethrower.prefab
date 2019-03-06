@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5607518483087824468}
   - component: {fileID: 5607518483087824471}
   - component: {fileID: 5607518483087824473}
+  - component: {fileID: 728267894833260259}
   m_Layer: 0
   m_Name: Flamethrower
   m_TagString: Flamethrower
@@ -106,3 +107,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.9370213, y: 1.6051178}
   m_EdgeRadius: 0
+--- !u!122 &728267894833260259
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5607518483087824472}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4280624567
+  m_Size: 2
