@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
-    [SerializeField] public float speed = 1;
+    [SerializeField] public float speed = 7;
     private Rigidbody2D m_rigidbody;
     [SerializeField] public float jumpForce = 0f;//= 7.5f;
     [SerializeField] public float health = 50.00f;
@@ -44,8 +44,9 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            jumpForce += 9f;
+            jumpForce += 14f;
             Jump();
+            jumpForce -= 2.0f;
         }
 
         if(!isGrounded)
@@ -113,8 +114,9 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.CompareTag("Gem"))
+        if(collider.CompareTag("Snowman_Jr"))
         {
+            speed = 0f;
             restart_game();
         }
         else if(collider.CompareTag("Cactus"))
@@ -177,7 +179,7 @@ public class Player : MonoBehaviour
         alive = false;
         speed = 0f;
         animator.SetBool("Is_dead", true);
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(0.7f);
         restart_game();
     }
 
