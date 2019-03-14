@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            jumpForce += 14f;
+            jumpForce += 15f;
             Jump();
             jumpForce -= 2.0f;
         }
@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
         if(collider.CompareTag("Snowman_Jr"))
         {
             speed = 0f;
-            restart_game();
+            SceneManager.LoadScene("WinGame");
         }
         else if(collider.CompareTag("Cactus"))
         {
@@ -180,7 +180,7 @@ public class Player : MonoBehaviour
         speed = 0f;
         animator.SetBool("Is_dead", true);
         yield return new WaitForSeconds(0.7f);
-        restart_game();
+        SceneManager.LoadScene("GameOver");
     }
 
     private static float GetDeltaTime()
