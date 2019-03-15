@@ -12,6 +12,6 @@ public class Sun : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.right * 6 * Time.deltaTime);
+        transform.Translate(Vector3.right * 7 * Time.deltaTime);
     }
 }
