@@ -59,7 +59,11 @@ public class SnowBall : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
+        else if (collider.CompareTag("Ground"))
+        {
+            Destroy(this.gameObject);
+        }
+
 
     }
 }
