@@ -8,10 +8,11 @@ public class MainMenu : MonoBehaviour
     public GameObject guidePanel;
     public GameObject mainMenuPanel;
     public bool guideOn = false;
+    public string level;
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene(level);
     }
 
     public void MainMenuQuit()

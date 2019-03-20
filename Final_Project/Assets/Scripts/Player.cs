@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     public static Player instance;
     private float delay = 2f;
     private float nextUse = 0f;
+    public string level;
+    public float ballSpeed;
 
     public GameObject snowball;
 
@@ -117,7 +119,7 @@ public class Player : MonoBehaviour
         if(collider.CompareTag("Snowman_Jr"))
         {
             speed = 0f;
-            SceneManager.LoadScene("WinGame");
+            SceneManager.LoadScene(level);
         }
         else if(collider.CompareTag("Cactus"))
         {
@@ -197,7 +199,7 @@ public class Player : MonoBehaviour
     {
         Vector3 oneUnitRightOfMe = this.transform.position + Vector3.right;
         GameObject Snowball = Instantiate(snowball, oneUnitRightOfMe, Quaternion.identity);
-        Snowball.GetComponent<Rigidbody2D>().AddForce(new Vector2(12f, 0f), ForceMode2D.Impulse);
+        Snowball.GetComponent<Rigidbody2D>().AddForce(new Vector2(ballSpeed, 0f), ForceMode2D.Impulse);
         health -= 5;
         Destroy(Snowball, 2f);
     }

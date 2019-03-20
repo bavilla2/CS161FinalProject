@@ -2582,6 +2582,16 @@ PrefabInstance:
       propertyPath: speed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5903374333293535482, guid: 509d49f29855c41d18bc78be5a4848d4,
+        type: 3}
+      propertyPath: level
+      value: WinGame1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903374333293535482, guid: 509d49f29855c41d18bc78be5a4848d4,
+        type: 3}
+      propertyPath: ballSpeed
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 509d49f29855c41d18bc78be5a4848d4, type: 3}
 --- !u!4 &1401920098 stripped
@@ -68437,7 +68447,7 @@ PrefabInstance:
     - target: {fileID: 2669374532455211302, guid: 69bd2de52a1e14253b91a9a734ed9e3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.73
+      value: -9.47
       objectReference: {fileID: 0}
     - target: {fileID: 2669374532455211302, guid: 69bd2de52a1e14253b91a9a734ed9e3b,
         type: 3}
